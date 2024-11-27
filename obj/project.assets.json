@@ -767,11 +767,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\navee\\Desktop\\SkaftoBageriWMS\\SkaftoBageriWMS\\SkaftoBageriWMS.csproj",
+      "projectUniqueName": "C:\\Users\\navee\\Desktop\\SkaftoBageri\\SkaftoBageriWMS\\SkaftoBageriWMS.csproj",
       "projectName": "SkaftoBageriWMS",
-      "projectPath": "C:\\Users\\navee\\Desktop\\SkaftoBageriWMS\\SkaftoBageriWMS\\SkaftoBageriWMS.csproj",
+      "projectPath": "C:\\Users\\navee\\Desktop\\SkaftoBageri\\SkaftoBageriWMS\\SkaftoBageriWMS.csproj",
       "packagesPath": "C:\\Users\\navee\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\navee\\Desktop\\SkaftoBageriWMS\\SkaftoBageriWMS\\obj\\",
+      "outputPath": "C:\\Users\\navee\\Desktop\\SkaftoBageri\\SkaftoBageriWMS\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
