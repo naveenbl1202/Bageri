@@ -1,0 +1,46 @@
+﻿@model SkaftoBageriWMS.Models.RegisterViewModel
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label for="Username">Username</label>
+        <input type="text" class="form-control" id="Username" name="Username" value="@Model?.Username" />
+        @if (ViewData.ModelState["Username"] != null)
+        {
+            <div style="color: red;">
+                @ViewData.ModelState["Username"]?.Errors?.FirstOrDefault()?.ErrorMessage
+            </div>
+        }
+    </div>
+
+    <div class="form-group">
+        <label for="Password">Password</label>
+        <input type="password" class="form-control" id="Password" name="Password" />
+        @if (ViewData.ModelState["Password"] != null)
+        {
+            <div style="color: red;">
+                @ViewData.ModelState["Password"]?.Errors?.FirstOrDefault()?.ErrorMessage
+            </div>
+        }
+    </div>
+
+    <div class="form-group">
+        <label for="Email">Email</label>
+        <input type="email" class="form-control" id="Email" name="Email" value="@Model?.Email" />
+        @if (ViewData.ModelState["Email"] != null)
+        {
+            <div style="color: red;">
+                @ViewData.ModelState["Email"]?.Errors?.FirstOrDefault()?.ErrorMessage
+            </div>
+        }
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Register</button>
+    </div>
+</form>

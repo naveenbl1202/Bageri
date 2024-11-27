@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Suppliers";
+}
+
+<h2>Manage Suppliers</h2>
+
+<div class="container mt-4">
+    <a href="/Suppliers/Add" class="btn btn-primary mb-3">Add New Supplier</a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Contact Person</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var supplier in Model)
+            {
+                <tr>
+                    <td>@supplier.Name</td>
+                    <td>@supplier.ContactPerson</td>
+                    <td>@supplier.Email</td>
+                    <td>@supplier.Phone</td>
+                    <td>
+                        <a href="/Suppliers/Edit/@supplier.Id" class="btn btn-warning btn-sm">Edit</a>
+                        <a href="/Suppliers/Delete/@supplier.Id" class="btn btn-danger btn-sm">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

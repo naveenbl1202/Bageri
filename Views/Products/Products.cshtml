@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Products";
+}
+
+<h2>Manage Products</h2>
+
+<div class="container mt-4">
+    <a href="/Products/Add" class="btn btn-primary mb-3">Add New Product</a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Supplier</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td>@product.ProductName</td>
+                    <td>@product.Supplier.Name</td> <!-- Assuming Supplier is linked correctly -->
+                    <td>@product.Price</td>
+                    <td>@product.Stock</td>
+                    <td>
+                        <a asp-controller="Products" asp-action="Edit" asp-route-id="@product.Id" class="btn btn-warning btn-sm">Edit</a>
+                        <a asp-controller="Products" asp-action="Delete" asp-route-id="@product.Id" class="btn btn-danger btn-sm">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

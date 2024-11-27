@@ -1,0 +1,32 @@
+﻿@model IEnumerable<SkaftoBageriWMS.Models.Inventory>
+
+<h2>Inventory List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Batch Number</th>
+            <th>Quantity In Stock</th>
+            <th>Reorder Point</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ProductName</td>
+                <td>@item.BatchNumber</td>
+                <td>@item.QuantityInStock</td>
+                <td>@item.ReorderPoint</td>
+                <td>
+                    <a href="@Url.Action("Edit", "Inventory", new { id = item.InventoryID })">Edit</a> |
+                    <a href="@Url.Action("Delete", "Inventory", new { id = item.InventoryID })">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("Create", "Inventory")" class="btn btn-primary">Add New Inventory Item</a>
